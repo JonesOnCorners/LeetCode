@@ -1,0 +1,24 @@
+Problem URL
+--> https://leetcode.com/problems/palindrome-number/submissions/
+
+
+
+class Solution:
+    @classmethod
+    def isPalindrome(self, x: int) -> bool:
+        try:
+            to_list = [int(z) for z in str(x)]
+            reversed_list = to_list[::-1]
+            return to_list == reversed_list
+        except ValueError as ve:
+            return False
+
+# test case 1
+Solution.isPalindrome(x=121)
+
+# test case 2
+Solution.isPalindrome(x=-121)
+
+# test case 3
+Solution.isPalindrome(z=10)
+
