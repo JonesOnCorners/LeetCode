@@ -22,3 +22,27 @@ Solution.isPalindrome(x=-121)
 # test case 3
 Solution.isPalindrome(z=10)
 
+
+
+# Other implementation which takes less memory but runs more time
+
+class Solution:
+    @classmethod
+    def isPalindrome(self, x: int) -> bool:
+        test_num = 0
+        original_num = x
+        while(x>0):
+            remainder = x % 10
+            test_num = (test_num * 10) + remainder
+            x = x//10
+        
+        return test_num == original_num
+
+# test case 1
+Solution.isPalindrome(x=121)
+
+# test case 2
+Solution.isPalindrome(x=-121)
+
+# test case 3
+Solution.isPalindrome(z=10)
